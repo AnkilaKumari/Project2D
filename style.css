@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #59875c;
+    padding: 20px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: column;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px; /* Adjust the height as needed */
+}
+
+.title {
+    border: 2px solid #000000; /* Border color */
+    padding: 10px; /* Padding inside the border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #dd1a1a; /* Background color */
+}
+
+.filters {
+    margin: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+}
+
+.filters label {
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+.filters select, .filters input[type="text"], .filters button {
+    padding: 7px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 7px;
+}
+
+.filters select:focus, .filters input[type="text"]:focus, .filters button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#simulate-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#simulate-btn:hover {
+    background-color: #0056b3;
+}
+
+.map-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#map-view {
+    width: 100%;
+    height: 600px; 
+    margin: 20px 0;
+    position: relative;
+}
+
+.legend {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+    padding: -1px;
+    border-radius: -1px;
+    
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+}

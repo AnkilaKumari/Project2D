@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Response Route Planning</title>
+    <!-- ArcGIS Styles -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>Reports</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="logo">
+                    <img src="images/logo.webp" alt="Logo">
+</div>
+                <h1 class="title">Emergency Response Route Planning</h1>
+                <button class="profile">User Profile</button>
+            </div>
+
+            <div class="filters">
+                <label for="road-condition">Road Condition:</label>
+                <select id="road-condition">
+                    <option value="all">All</option>
+                    <option value="good">Good</option>
+                    <option value="hazardous">Hazardous</option>
+                    <option value="closed">Closed</option>
+                </select>
+                <label for="traffic-congestion">Traffic Congestion:</label>
+                <select id="traffic-congestion">
+                    <option value="all">All</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="emergency-type">Emergency Type:</label>
+                <select id="emergency-type">
+                    <option value="all">All</option>
+                    <option value="fire">Fire</option>
+                    <option value="medical">Medical</option>
+                    <option value="police">Police</option>
+                </select>
+                <label for="route-details">Route Details:</label>
+                <select id="route-details">
+                    <option value="current">Current Route</option>
+                    <option value="eta">ETA: 10 min</option>
+                    <option value="distance">Distance: 5 mi</option>
+                    <option value="alt1">Alternate Route 1</option>
+                    <option value="alt2">Alternate Route 2</option>
+                </select>
+                <label for="start-location">Start Location:</label>
+                <input type="text" id="start-location" placeholder="34.0522,-118.2437">
+                <label for="end-location">End Location:</label>
+                <input type="text" id="end-location" placeholder="34.0522,-118.2437">
+                <button id="simulate-btn">Simulate</button>
+            </div>
+
+            <div class="map-section">
+                <div id="map-view" class="map-view">
+                    <!-- Map content will be injected here by ArcGIS API -->
+                    <div class="legend">
+                        <p>Legends: Green = Optimal Route, Red = Congestion, Blue = Alternate Route</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Route Details Section -->
+            <div class="route-details-section">
+                <!-- <h2>Route Details</h2> -->
+                <div id="route-info">
+                    <!-- Route details will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>| Settings | Contact | Support |</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ArcGIS JavaScript API -->
+    <script src="https://js.arcgis.com/4.29/"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
