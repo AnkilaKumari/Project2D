@@ -1,4 +1,5 @@
 # Project2D 
 
 
-## Ensure you are logged in with your Non-UMN ID and password to access the Map.
+## When you open MAP, a sign-in pop-up will appear. Log in using your ArcGIS ID and password, but do not use your UMN credentials.
+
